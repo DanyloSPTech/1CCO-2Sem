@@ -24,7 +24,7 @@ public class PesoIdeal {
             pesoIdeal = 0.0;
         }
         
-        System.out.printf("Peso ideal: %.2fKG", pesoIdeal);
+        System.out.printf("Peso ideal: %.2fKG\n", pesoIdeal);
         
     }
     
