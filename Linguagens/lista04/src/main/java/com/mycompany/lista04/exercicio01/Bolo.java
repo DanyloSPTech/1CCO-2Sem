@@ -16,9 +16,13 @@ public class Bolo {
     private Integer quantidadeVendida;
     
     public Bolo(String sabor, Double valor){
-        this.sabor = sabor;
-        this.valor = valor;
+        setSabor(sabor);
+        setValor(valor);
         quantidadeVendida = 0;
+    }
+    
+    public Bolo(){
+        
     }
     
     public void comprarBolo(Integer quantidade){
@@ -35,7 +39,7 @@ public class Bolo {
     
     public void exibirRelatorio(){
         Double valorDia = valor * quantidadeVendida;
-        System.out.printf("O bolo sabor %s, foi comprado %d vezes hoje, totalizando R$ %.2f.", sabor, quantidadeVendida, valorDia);
+        System.out.printf("O bolo sabor %s, foi comprado %d vezes hoje, totalizando R$ %.2f.\n", sabor, quantidadeVendida, valorDia);
     }
     
     public String getSabor(){
@@ -43,7 +47,11 @@ public class Bolo {
     }
     
     public void setSabor(String sabor){
-        this.sabor = sabor;
+        if(sabor.equals("chocolate") || sabor.equals("morango") || sabor.equals("abacaxi")){
+            this.sabor = sabor;
+        }else{
+            System.out.println("Sabor inválido! sabores válidos: chocolate, morango e abacaxi");
+        }
     }
     
     public Double getValor(){
@@ -51,7 +59,11 @@ public class Bolo {
     }
     
     public void setValor(Double valor) {
-        this.valor = valor;
+        if(valor >= 30.00 && valor <= 50.00){
+            this.valor = valor;
+        }else{
+            System.out.println("Valor inválido! informe um valor entre R$ 30.00 e R$ 50.00");
+        }
     }
     
 }
