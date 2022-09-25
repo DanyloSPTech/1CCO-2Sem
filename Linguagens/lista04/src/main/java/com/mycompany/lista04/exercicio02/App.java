@@ -13,7 +13,7 @@ public class App {
 
     public static void main(String[]args){
         
-        Encomenda mouse = new Encomenda("P", "Rua Santos da Glória, 18", "Av Dr. Pedro, 255", 42.2, 87.50);
+        Encomenda mouse = new Encomenda("P", "Rua Santos da Glória, 18", "Av Dr. Pedro, 255", 70.0, 270.0);
         mouse.emitirEtiquieta();
         System.out.println("-".repeat(50));
         System.out.println("-".repeat(50));

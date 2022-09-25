@@ -4,6 +4,8 @@
  */
 package com.mycompany.lista04.exercicio01;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Danylo Dias Gomes
@@ -13,7 +15,9 @@ public class App {
 
     public static void main(String[]args){
         
-        Bolo bolo1 = new Bolo("morango", 35.00);        
+        Scanner in = new Scanner(System.in);
+        
+        Bolo bolo1 = new Bolo("morango", 10.00);        
         Bolo bolo2 = new Bolo("abacaxi", 30.00);
         Bolo bolo3 = new Bolo("chocolate", 45.00);
         

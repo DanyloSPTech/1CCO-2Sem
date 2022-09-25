@@ -26,15 +26,20 @@ public class Bolo {
     }
     
     public void comprarBolo(Integer quantidade){
-        if(quantidade > 0 && quantidade <= 100){
-            quantidadeVendida += quantidade;
+        if(valor == null || sabor == null || quantidadeVendida == null){
+            System.out.println("Impossível comprar bolo, algum atributo está inválido!");
         }else{
+            if(quantidade > 0 && quantidade <= 100){
+                quantidadeVendida += quantidade;
+            }else{
             if(quantidade > 100){
                 System.out.println("Seu pedido ultrapassou nosso limite diário para esse bolo.");
             }else{
                 System.out.println("Valor Inválido! Por favor informe um número válido.");
             }
+        }  
         }
+        
     }
     
     public void exibirRelatorio(){
