@@ -60,6 +60,20 @@ public class VendedorComissao {
         this.taxa = taxa;
     }
     
-    
+    @Override
+    public String toString(){
+        
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append("\n\n").append("---Vendedor Comissão---").append("\n");
+        sb.append("Código: ").append(codigo).append("\n");
+        sb.append("Nome: ").append(nome).append("\n");
+        sb.append("Vendas: ").append(vendas).append("\n");
+        sb.append("Taxa: ").append(taxa).append("\n");
+        sb.append("\n").append("Salário: ").append(calcularSalario());
+        
+        return sb.toString();
+        
+    }
     
 }

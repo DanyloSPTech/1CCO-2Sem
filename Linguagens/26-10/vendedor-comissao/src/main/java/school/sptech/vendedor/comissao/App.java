@@ -14,9 +14,23 @@ public class App {
 
     public static void main(String[]args){
         
-        VendedorComissaoMaisFixo vendedor = new VendedorComissaoMaisFixo(100, "Danylo", 5500.00, 15.00, 1200.00);
+        Departamento departamento = new Departamento("Eletronicos");
         
-        System.out.println(vendedor.calcularSalario());
+        VendedorComissao vendedor = new VendedorComissao(50, "Douglas", 7500.00, 12.00);
+        
+        VendedorComissaoMaisFixo vendedorFixo = new VendedorComissaoMaisFixo(100, "Danylo", 5500.00, 15.00, 1200.00);
+        
+        departamento.adicionarVendedor(vendedor);
+        departamento.adicionarVendedor(vendedorFixo);
+        
+        System.out.println("Vendedor 1: " + vendedor.toString());
+        System.out.println("Vendedor 2: " + vendedorFixo.toString());
+        
+        System.out.println("Total Vendedores: " + departamento.getQuantidadeVendedores());
+        
+        System.out.println("------------------------------------------------------");
+        
+        System.out.println("Salário Total Departamento: " + departamento.calcularTotalSalario());
         
     }
     
