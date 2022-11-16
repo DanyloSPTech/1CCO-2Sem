@@ -40,7 +40,7 @@ public class DesenvolvedorMobile extends Desenvolvedor{
         sb.append("Valor da Hora Trabalhada: ").append(getValorHoraTrabalhada()).append("\n");
         sb.append("Quantidade Horas Trabalhadas Mobile: ").append(qtdHorasTrabalhadasMobile).append("\n");
         sb.append("Valor da Hora Trabalhada Mobile: ").append(valorHorasTrabalhadasMobile).append("\n");
-        sb.append("Salário: ").append(super.getSalario() + getSalario());
+        sb.append("Salário: R$ ").append(String.format("%.2f", getSalario()));
         
         return sb.toString();
     }

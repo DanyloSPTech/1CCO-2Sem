@@ -12,9 +12,9 @@ package com.mycompany.desenvolvedor.consultoria;
 
 public class Desenvolvedor {
     
-    private String nome;
-    private Integer qtdHorasTrabalhadas;
-    private Double valorHoraTrabalhada;
+    protected String nome;
+    protected Integer qtdHorasTrabalhadas;
+    protected Double valorHoraTrabalhada;
     
     public Desenvolvedor (String nome, Integer qtdHorasTrabalhadas, Double valorHoraTrabalhada){
         this.nome = nome;
@@ -27,7 +27,8 @@ public class Desenvolvedor {
     }
     
     public Double getSalario(){
-        return valorHoraTrabalhada * qtdHorasTrabalhadas;
+        Double salario = valorHoraTrabalhada * qtdHorasTrabalhadas;
+        return salario;
     }
     
     @Override
@@ -38,7 +39,7 @@ public class Desenvolvedor {
         sb.append("Nome: ").append(nome).append("\n");
         sb.append("Quantidade de Horas Trabalhadas: ").append(qtdHorasTrabalhadas).append("\n");
         sb.append("Valor da Hora Trabalhada: ").append(valorHoraTrabalhada).append("\n");
-        sb.append("Salário: ").append(getSalario());
+        sb.append("Salário: R$ ").append(String.format("%.2f", getSalario()));
         
         return sb.toString();
     }

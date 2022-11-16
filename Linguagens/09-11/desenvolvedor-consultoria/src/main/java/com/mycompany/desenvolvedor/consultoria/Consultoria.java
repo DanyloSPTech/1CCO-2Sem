@@ -87,11 +87,6 @@ public class Consultoria {
         sb.append("\n").append("Consultoria:").append("\n");
         sb.append("Nome: ").append(nome).append("\n");
         sb.append("Vagas: ").append(vagas).append("\n");
-//        sb.append("Desenvolvedores:").append("\n");
-//        for(Desenvolvedor dev : desenvolvedores){
-//            dev.toString();
-//            sb.append("-----------------------").append("\n");
-//        }
         
         return sb.toString();
     }

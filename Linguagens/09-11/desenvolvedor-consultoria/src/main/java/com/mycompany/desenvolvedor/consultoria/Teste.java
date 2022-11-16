@@ -36,32 +36,58 @@ public class Teste {
         
         System.out.println("-x-".repeat(25));
         
-        Desenvolvedor busca = consultoria.buscarDesenvolvedorPorNome("Douglas");
+        Desenvolvedor busca = consultoria.buscarDesenvolvedorPorNome("Douglas Adão");
         busca.toString();
+        
+        System.out.println("-x-".repeat(25));
         
         System.out.println("Desenvolvedor Marcos Henrique Existe?" + consultoria.existePorNome("Marcos Henrique"));
         
+        System.out.println("-x-".repeat(25));
+        
         System.out.println("Quantidade de Desenvolvedores: " + consultoria.getQuantidadeDesenvolvedores());
+        
+        System.out.println("-x-".repeat(25));
         
         System.out.println("Quantidae de Desenvolvedores Mobile: " + consultoria.getQuantidadeDesenvolvedoresMobile());
         
+        System.out.println("-x-".repeat(25));
+        
         System.out.println("Total Salários: " + consultoria.getTotalSalarios());
         
+        System.out.println("-x-".repeat(25));
+                
         System.out.println("Buscando dados do desenvolvedor Douglas Adão: " + consultoria.buscarDesenvolvedorPorNome("Douglas Adão").toString());
+        
+        System.out.println("-x-".repeat(25));
         
         System.out.println("Adicionando Novo Dev A Consultoria");
         
         consultoria.contratar(dev2);
         
+        System.out.println("-x-".repeat(25));
+
         Desenvolvedor devSobre = new Desenvolvedor("Danylo Dias", 180, 1.50);
         
         System.out.println("Adicionando Novo Dev A Consultoria Novamente");
         
+        System.out.println("-x-".repeat(25));
+
         consultoria.contratar(devSobre);
+
+        System.out.println("Quantidade de Desenvolvedores: " + consultoria.getQuantidadeDesenvolvedores());
+        
+        System.out.println("-x-".repeat(25));
+        
+        System.out.println("Quantidae de Desenvolvedores Mobile: " + consultoria.getQuantidadeDesenvolvedoresMobile());
+        
+        System.out.println("-x-".repeat(25));
         
         System.out.println("Resultado Final:");
         
-        consultoria.toString();
+        System.out.println(consultoria.toString());
+        
+        System.out.println("-x-".repeat(25));
         
     }
     
