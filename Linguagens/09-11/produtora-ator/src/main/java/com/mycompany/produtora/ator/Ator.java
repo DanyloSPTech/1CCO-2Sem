@@ -42,5 +42,29 @@ public class Ator {
         
         return sb.toString();
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getQtdHorasTrabalhadas() {
+        return qtdHorasTrabalhadas;
+    }
+
+    public void setQtdHorasTrabalhadas(Integer qtdHorasTrabalhadas) {
+        this.qtdHorasTrabalhadas = qtdHorasTrabalhadas;
+    }
+
+    public Double getValorHoraTrabalhada() {
+        return valorHoraTrabalhada;
+    }
+
+    public void setValorHoraTrabalhada(Double valorHoraTrabalhada) {
+        this.valorHoraTrabalhada = valorHoraTrabalhada;
+    }
     
 }

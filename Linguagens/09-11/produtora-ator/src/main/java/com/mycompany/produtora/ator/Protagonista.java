@@ -45,7 +45,21 @@ public class Protagonista extends Ator{
         return sb.toString();
         
     }
-    
-    
+
+    public Integer getQtdHorasTrabalhadasProtagonista() {
+        return qtdHorasTrabalhadasProtagonista;
+    }
+
+    public void setQtdHorasTrabalhadasProtagonista(Integer qtdHorasTrabalhadasProtagonista) {
+        this.qtdHorasTrabalhadasProtagonista = qtdHorasTrabalhadasProtagonista;
+    }
+
+    public Double getValorHorasTrabalhadaProtagonista() {
+        return valorHorasTrabalhadaProtagonista;
+    }
+
+    public void setValorHorasTrabalhadaProtagonista(Double valorHorasTrabalhadaProtagonista) {
+        this.valorHorasTrabalhadaProtagonista = valorHorasTrabalhadaProtagonista;
+    }
     
 }
