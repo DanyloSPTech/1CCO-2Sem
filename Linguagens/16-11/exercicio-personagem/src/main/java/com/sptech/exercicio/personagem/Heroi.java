@@ -17,10 +17,6 @@ public class Heroi extends Personagem{
     public Heroi(String codinome, String nome, List <SuperPoder> poderes){
         super(codinome, nome, poderes);
     }
-    
-    public Heroi(){
-        super();
-    }
 
     @Override
     public Double getForcaTotal() {

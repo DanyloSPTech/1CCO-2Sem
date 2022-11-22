@@ -25,9 +25,9 @@ public abstract class Personagem {
         this.poderes = poderes;
     }
     
-    public Personagem(){
-        poderes = new ArrayList();
-    }
+//    public Personagem(){
+//        poderes = new ArrayList();
+//    }
     
     public void adicionaPoder(String nome, Integer categoria){
         SuperPoder poder = new SuperPoder(nome, categoria);
@@ -48,6 +48,7 @@ public abstract class Personagem {
             sb.append("Poder: ").append(poder.getNome()).append("\n");
             sb.append("Categoria: ").append(poder.getCategoria()).append("\n");
             sb.append("-".repeat(30));
+            sb.append("\n");
         }
         sb.append("X-X".repeat(15)).append("\n");
         

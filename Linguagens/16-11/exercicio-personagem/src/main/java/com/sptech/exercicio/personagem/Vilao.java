@@ -17,10 +17,6 @@ public class Vilao extends Personagem{
     public Vilao(String codinome, String nome, List <SuperPoder> poderes){
         super(codinome, nome, poderes);
     }
-    
-    public Vilao(){
-        super();
-    }
 
     @Override
     public Double getForcaTotal() {
