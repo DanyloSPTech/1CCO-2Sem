@@ -20,17 +20,25 @@ public enum Lanche {
         this.preco = preco;
     }
     
-    public void mostrarOpcoes(){
+    public static void mostrarOpcoes(){
         StringBuilder sb = new StringBuilder();
-        sb.append("X").append("-".repeat(18)).append("X").append(" Menu de Opções ").append("X").append("-".repeat(18)).append("X").append("\n").append("\n");
+        sb.append("\n");
         for(Lanche lanche : Lanche.values()){
             sb.append("-".repeat(50)).append("\n");
-            sb.append("ID: ").append(lanche.getId()).append("\n");
-            sb.append("Nome: ").append(lanche.getNome()).append("\n");
-            sb.append("Valor: ").append(lanche.getPreco()).append("\n");
+            sb.append(String.format("Código: %d | Lanche: %s - R$ %.2f", lanche.getId(), lanche.getNome(), lanche.getPreco())).append("\n");
             sb.append("-".repeat(50)).append("\n");
         }
-        sb.append("X").append("-".repeat(18)).append("X").append("                 ").append("X").append("-".repeat(18)).append("X").append("\n").append("\n");
+        sb.append("\n");
+        System.out.println(sb.toString());
+    }
+    
+    public static Lanche buscarPorId(Integer id){
+        for(Lanche lanche : Lanche.values()){
+            if(lanche.getId() == id){
+                return lanche;
+            }
+        }
+        throw new IllegalArgumentException("ID de Lanche não existe!");
     }
     
     public Integer getId(){

@@ -20,17 +20,25 @@ public enum Bebida {
         this.preco = preco;
     }
     
-    public void mostrarOpcoes(){
+    public static void mostrarOpcoes(){
         StringBuilder sb = new StringBuilder();
-        sb.append("X").append("-".repeat(18)).append("X").append(" Menu de Opções ").append("X").append("-".repeat(18)).append("X").append("\n").append("\n");
+        sb.append("\n");
         for(Bebida bebida : Bebida.values()){
             sb.append("-".repeat(50)).append("\n");
-            sb.append("ID: ").append(bebida.getId()).append("\n");
-            sb.append("Nome: ").append(bebida.getNome()).append("\n");
-            sb.append("Valor: ").append(bebida.getPreco()).append("\n");
+            sb.append(String.format("Código: %d | Bebida: %s - R$ %.2f", bebida.getId(), bebida.getNome(), bebida.getPreco())).append("\n");
             sb.append("-".repeat(50)).append("\n");
         }
-        sb.append("X").append("-".repeat(18)).append("X").append("                 ").append("X").append("-".repeat(18)).append("X").append("\n").append("\n");
+        sb.append("\n");
+        System.out.println(sb.toString());
+    }
+    
+    public static Bebida buscarPorId(Integer id){
+        for(Bebida bebida : Bebida.values()){
+            if(bebida.getId() == id){
+                return bebida;
+            }
+        }
+        throw new IllegalArgumentException("ID de Bebida não existe!");
     }
     
     public Integer getId(){

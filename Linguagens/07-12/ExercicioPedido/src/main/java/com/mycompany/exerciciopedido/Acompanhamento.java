@@ -20,17 +20,25 @@ public enum Acompanhamento {
         this.preco = preco;
     }
     
-    public void mostrarOpcoes(){
+    public static void mostrarOpcoes(){
         StringBuilder sb = new StringBuilder();
-        sb.append("X").append("-".repeat(18)).append("X").append(" Menu de Opções ").append("X").append("-".repeat(18)).append("X").append("\n").append("\n");
+        sb.append("\n");
         for(Acompanhamento acompanhamento : Acompanhamento.values()){
             sb.append("-".repeat(50)).append("\n");
-            sb.append("ID: ").append(acompanhamento.getId()).append("\n");
-            sb.append("Nome: ").append(acompanhamento.getNome()).append("\n");
-            sb.append("Valor: ").append(acompanhamento.getPreco()).append("\n");
+            sb.append(String.format("Código: %d | Lanche: %s - R$ %.2f", acompanhamento.getId(), acompanhamento.getNome(), acompanhamento.getPreco())).append("\n");
             sb.append("-".repeat(50)).append("\n");
         }
-        sb.append("X").append("-".repeat(18)).append("X").append("                 ").append("X").append("-".repeat(18)).append("X").append("\n").append("\n");
+        sb.append("\n");
+        System.out.println(sb.toString());
+    }
+    
+    public static Acompanhamento buscarPorId(Integer id){
+        for(Acompanhamento acompanhamento : Acompanhamento.values()){
+            if(acompanhamento.getId() == id){
+                return acompanhamento;
+            }
+        }
+        throw new IllegalArgumentException("ID de Acompanhamento não existe!");
     }
     
     public Integer getId(){
